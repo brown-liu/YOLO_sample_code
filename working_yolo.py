@@ -1,6 +1,4 @@
 import cv2
-import numpy as numpy
-import tensorflow as tf
 import numpy as np
 
 cap = cv2.VideoCapture(0)
