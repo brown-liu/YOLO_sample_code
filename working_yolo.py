@@ -53,8 +53,8 @@ while True:
             (w, h) = (boxes[i][2], boxes[i][3])
             color = [int(c) for c in COLORS[classIDs[i]]]
             cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-            text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
-            cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,1, color, 3)
+            text = "{}: {:.2f}%".format(LABELS[classIDs[i]], confidences[i]*100)
+            cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,1.5, color, 3)
 
     cv2.imshow('frame', frame)
 
